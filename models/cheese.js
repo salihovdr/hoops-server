@@ -6,9 +6,6 @@ const cheeseSchema = new mongoose.Schema({
   name: { type: String, required: true }
 });
 
-// Add `createdAt` and `updatedAt` fields
-cheeseSchema.set('timestamps', true);
-
 // Customize output for `res.json(data)`, `console.log(data)` etc.
 cheeseSchema.set('toObject', {
   virtuals: true,     // include built-in virtual `id`
