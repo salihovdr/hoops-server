@@ -4,9 +4,9 @@ const mongoose = require('mongoose');
 
 const { MONGODB_URI } = require('../config');
 
-const Cheese = require('../models/cheese');
+const Court = require('../models/court');
 
-const seedCheeses = require('../db/seed/cheeses.json');
+const seedCourts = require('../db/seed/courts.json');
 
 console.log(`Connecting to mongodb at ${MONGODB_URI}`);
 mongoose.connect(MONGODB_URI)
@@ -18,7 +18,7 @@ mongoose.connect(MONGODB_URI)
     console.info('Seeding Database');
     return Promise.all([
 
-      Cheese.insertMany(seedCheeses),
+      Court.insertMany(seedCourts),
 
     ]);
   })

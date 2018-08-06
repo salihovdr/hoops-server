@@ -6,7 +6,7 @@ const morgan = require('morgan');
 
 const { PORT, CLIENT_ORIGIN } = require('./config');
 const { dbConnect } = require('./db-mongoose');
-const Cheese = require('./models/cheese');
+const Court = require('./models/court');
 
 const app = express();
 
@@ -26,23 +26,23 @@ app.use(
   express.json()
 );
 
-app.get('/api/cheeses', (req, res) => {
-  Cheese.find()
-    .then(cheeses => {
-      res.json(cheeses)
+app.get('/api/courts', (req, res) => {
+  Court.find()
+    .then(courts => {
+      res.json(courts)
     })
 })
 
-app.post('/api/cheeses', (req, res, next) => {
+app.post('/api/courts', (req, res, next) => {
   console.log(req.body);
   const name = req.body.name;
 
-  Cheese.create({name})
-    .then(newCheese => {
+  Court.create({name})
+    .then(newCourt => {
       res
       .status(201)
-      .location(`${req.originalUrl}/${newCheese.id}`)
-      .json(newCheese);
+      .location(`${req.originalUrl}/${newCourt.id}`)
+      .json(newCourt);
     })
     .catch(err => next(err))
   }
