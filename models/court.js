@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const courtSchema = new mongoose.Schema({
   name: { 
     type: String, //Walter Reed
-    required: true ,
+    required: true,
     unique: true
   },
   photo: String, //url
@@ -12,19 +12,19 @@ const courtSchema = new mongoose.Schema({
   address: {
     street: {
       type: String, //1421 Glebe Rd
-      required: true
+      /*required: true*/
     },
     city: {
       type: String, //Arlington
-      required: true
+      /*required: true*/
     },
     zip: {
       type: String, //22201
-      required: true
+      /*required: true*/
     },
     phone: {
       type: String, //970-234-5757
-      required: false
+      /*required: true*/
     }
   },
   hours: [
@@ -32,11 +32,11 @@ const courtSchema = new mongoose.Schema({
       day: [ //mon
         { 
           open: Number,     // open: 570 => hrs * mins
-          required: true
+          /*required: true*/
         },
         {
           close: Number, // close: 1080
-          required: true
+          /*required: true*/
         }
       ]
     }

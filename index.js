@@ -1,4 +1,4 @@
-'use strict';
+
 
 const express = require('express');
 const cors = require('cors');
@@ -6,7 +6,9 @@ const morgan = require('morgan');
 
 const { PORT, CLIENT_ORIGIN } = require('./config');
 const { dbConnect } = require('./db-mongoose');
-const Court = require('./models/court');
+
+const courtsRouter = require('./routes/courts');
+const eventsRouter = require('./routes/events');
 
 const app = express();
 
@@ -26,27 +28,8 @@ app.use(
   express.json()
 );
 
-app.get('/api/courts', (req, res) => {
-  Court.find()
-    .then(courts => {
-      res.json(courts)
-    })
-})
-
-app.post('/api/courts', (req, res, next) => {
-  console.log(req.body);
-  const name = req.body.name;
-
-  Court.create({name})
-    .then(newCourt => {
-      res
-      .status(201)
-      .location(`${req.originalUrl}/${newCourt.id}`)
-      .json(newCourt);
-    })
-    .catch(err => next(err))
-  }
-)
+app.use('/api/courts', courtsRouter);
+app.use('/api/events', eventsRouter);
 
 // Custom 404 Not Found route handler
 app.use((req, res, next) => {
@@ -57,6 +40,7 @@ app.use((req, res, next) => {
 
 // Custom Error Handler
 app.use((err, req, res, next) => {
+  console.log(err);
   if (err.status) {
     const errBody = Object.assign({}, err, { message: err.message });
     res.status(err.status).json(errBody);

@@ -1,23 +1,94 @@
 [
   {
-    "name": "Arlington Mill Community Center"
+    "name": "Arlington Mill Community Center",
+    "photo": "https: //images.unsplash.com/photo-1505666287802-931dc83948e9",
+    "description": "One of the oldest courts in Arlington. Popular with high school and college players",
+    "address": {
+      "street": "909 S Dinwiddie St",
+      "city": "Arlington",
+      "zip": "22204",
+      "phone": "703-228-7790"
+    },
+    "hours": 
+    [ 
+      { "Mon": [ { "open": 570 }, {"close": 1200 } ] }, 
+      { "Tue": [ { "open": 570 }, {"close": 1200 } ] },
+      { "Wed": [ { "open": 570 }, {"close": 1200 } ] },
+      { "Thu": [ { "open": 570 }, {"close": 1200 } ] },
+      { "Fri": [ { "open": 570 }, {"close": 1200 } ] },
+      { "Sat": [ { "open": 600 }, {"close": 1020 } ] },
+      { "Sun": [ { "open": 600 }, {"close": 1080 } ] }
+    ],
+    "comments": [],
+    "events": []
+  }, 
+  {
+    "name": "Charles Drew Community Center",
+    "photo": "https://images.unsplash.com/photo-1467809941367-bbf259d44dd6",
+    "description": "Place gets busy on Friday and Saturday nights. Terrific ballers, great games",
+    "address": {
+      "street": "3500 23rd St S",
+      "city": "Arlington",
+      "zip": "22206",
+      "phone": "703-228-5725"
+    },
+    "hours": 
+    [ 
+      { "Mon": [ { "open": 570 }, {"close": 1200 } ] }, 
+      { "Tue": [ { "open": 570 }, {"close": 1200 } ] },
+      { "Wed": [ { "open": 570 }, {"close": 1200 } ] },
+      { "Thu": [ { "open": 570 }, {"close": 1200 } ] },
+      { "Fri": [ { "open": 570 }, {"close": 1260 } ] },
+      { "Sat": [ { "open": 660 }, {"close": 1260 } ] },
+      { "Sun": [ { "open": 720 }, {"close": 1080 } ] }
+    ],
+    "comments": [],
+    "events": []
   },
   {
-    "name": "Carver Community Center"
+    "name": "Stafford Park",
+    "photo": "https://images.unsplash.com/photo-1501537981688-f0f9400ca5e3",
+    "description": "Nice court. Plenty parking space on the N.Stafford St. Good games on Wednesday and Friday nights",
+    "address": {
+      "street": "4321 Old Dominion Dr",
+      "city": "Arlington",
+      "zip": "22207",
+      "phone": "703-228-6525"
+    },
+    "hours": 
+    [ 
+      { "Mon": [ { "open": 570 }, {"close": 1200 } ] }, 
+      { "Tue": [ { "open": 570 }, {"close": 1200 } ] },
+      { "Wed": [ { "open": 570 }, {"close": 1200 } ] },
+      { "Thu": [ { "open": 570 }, {"close": 1200 } ] },
+      { "Fri": [ { "open": 570 }, {"close": 1260 } ] },
+      { "Sat": [ { "open": 660 }, {"close": 1260 } ] },
+      { "Sun": [ { "open": 720 }, {"close": 1080 } ] }
+    ],
+    "comments": [],
+    "events": []
   },
   {
-    "name": "Charles Drew Community Center"
-  },
-  {
-    "name": "Gunston Community Center"
-  },
-  {
-    "name": "Langston-Brown Community"
-  },
-  {
-    "name": "Thomas Jefferson Community Center"
-  },
-  {
-    "name": "Walter Reed Community Center"
+    "name": "Langston-Brown Community Center",
+    "photo": "https://sportadvisory.com/wp-content/uploads/2017/12/shutterstock_678814279-1024x683.jpg",
+    "description": "Great facility. Clean and well-maintained. Some great players from nearby Marymount U campus. League games on Sundays and Saturdays",
+    "address": {
+      "street": "2121 N Culpeper St",
+      "city": "Arlington",
+      "zip": "22207",
+      "phone": "703-228-5210"
+    },
+    "hours": 
+    [ 
+      { "Mon": [ { "open": 600 }, {"close": 1140 } ] }, 
+      { "Tue": [ { "open": 600 }, {"close": 1140 } ] },
+      { "Wed": [ { "open": 600 }, {"close": 1140 } ] },
+      { "Thu": [ { "open": 600 }, {"close": 1140 } ] },
+      { "Fri": [ { "open": 600 }, {"close": 1140 } ] },
+      { "Sat": [ { "open": 660 }, {"close": 1040 } ] },
+      { "Sun": [ { "open": 660 }, {"close": 1040 } ] }
+    ],
+    "comments": [],
+    "events": []
   }
 ]
