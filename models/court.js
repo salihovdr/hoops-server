@@ -48,12 +48,7 @@ const courtSchema = new mongoose.Schema({
       ref: 'Comment'
     }
   ],
-  events: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Event'
-    }
-  ]
+  events: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Event' } ]
 });
 
 // Customize output for `res.json(data)`, `console.log(data)` etc.

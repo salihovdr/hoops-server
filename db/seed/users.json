@@ -1,0 +1,38 @@
+[
+  {
+  "_id": "333333333333333333333300",
+  "firstName": "Bob",
+  "lastName": "Brown",
+  "photo": "http: //www.rid4good.com/portal/assets/images/default-profile-pic.png",
+  "skillLevel": "Beginner",
+  "favLeague": "NBA",
+  "favTeam": "Washington Wizards",
+  "favPlayer": "John Wall",
+  "username": "bobuser",
+  "password": "password"
+  },
+  {
+    "_id": "333333333333333333333301",
+    "firstName": "John",
+    "lastName": "Smith",
+    "photo": "http: //www.rid4good.com/portal/assets/images/default-profile-pic.png",
+    "skillLevel": "Intermediate",
+    "favLeague": "NBA",
+    "favTeam": "Cleveland Cavaliers",
+    "favPlayer": "Kevin Love",
+    "username": "johnuser",
+    "password": "password"
+  },
+  {
+    "_id": "333333333333333333333302",
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "photo": "http://thehomemanali.com/wp-content/uploads/cache/2017/07/profile-pic-dummy/1513037944.jpg",
+    "skillLevel": "Advanced",
+    "favLeague": "NBA",
+    "favTeam": "Golden State Warriors",
+    "favPlayer": "Kevin Durant",
+    "username": "janeuser",
+    "password": "password"
+  }
+]

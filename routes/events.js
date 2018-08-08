@@ -41,8 +41,8 @@ router.post('/', (req, res, next) => {
         .location(`${req.originalUrl}/${newEvent.id}`)
         .json(newEvent);
     })
-    .catch(err => next(err))
+    .catch(err => next(err));
 }
-)
+);
 
 module.exports = router;

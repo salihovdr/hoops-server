@@ -9,6 +9,7 @@ const { dbConnect } = require('./db-mongoose');
 
 const courtsRouter = require('./routes/courts');
 const eventsRouter = require('./routes/events');
+const usersRouter = require('./routes/users');
 
 const app = express();
 
@@ -30,6 +31,7 @@ app.use(
 
 app.use('/api/courts', courtsRouter);
 app.use('/api/events', eventsRouter);
+app.use('/api/users', usersRouter);
 
 // Custom 404 Not Found route handler
 app.use((req, res, next) => {
