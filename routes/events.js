@@ -6,6 +6,7 @@ const router = express.Router();
 //GET all
 router.get('/', (req, res, next) => {
   Event.find()
+    .populate('courtId')
     .then(events => {
       res.json(events);
     })
@@ -19,6 +20,7 @@ router.get('/:id', (req, res, next) => {
   const id = req.params.id;
 
   Event.findById(id)
+    .populate('courtId')
     .then(event => {
       if (event) {
         res.json(event);
@@ -31,10 +33,16 @@ router.get('/:id', (req, res, next) => {
 );
 
 router.post('/', (req, res, next) => {
+  console.log(req.body);
+  const title = req.body.title;
+  const description = req.body.description;
+  const date = req.body.date.date;
+  const time = req.body.date.time;
+  const timestamp = `${ date } ${ time }`;
+  console.log(timestamp);
 
-  const name = req.body.name;
 
-  Event.create({ name })
+  Event.create({ title, description, time: timestamp })
     .then(newEvent => {
       res
         .status(201)

@@ -1,4 +1,3 @@
-'use strict';
 
 const express = require('express');
 //const passport = require('passport');
@@ -22,6 +21,7 @@ const router = express.Router();
 //GET all
 router.get('/', (req, res, next) => {
   const { /*name,*/ zip }= req.query;
+  
 
   let filter = {};
 
@@ -35,6 +35,7 @@ router.get('/', (req, res, next) => {
   // }
 
   Court.find(filter)
+    .populate('events')
     .then(courts => {
       res.json(courts);
     })
@@ -48,6 +49,10 @@ router.get('/:id', (req, res, next) => {
   const id = req.params.id;
 
   Court.findById(id)
+    .populate({
+      path: 'events',
+      populate: { path: 'authorId', select: 'username' }
+    })
     .then(court => {
       if(court){
         res.json(court);

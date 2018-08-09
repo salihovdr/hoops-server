@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const eventSchema = new mongoose.Schema({
   title: { type: String, /*required: true*/ },
   description: String,
-  time: { type: Date, default: Date.now, required: true },
+  time: {type: Date, required: true},
   courtId: { type: mongoose.Schema.Types.ObjectId, ref: 'Court' },
   authorId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
   attending: Number

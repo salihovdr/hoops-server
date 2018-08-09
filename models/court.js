@@ -27,27 +27,17 @@ const courtSchema = new mongoose.Schema({
       /*required: true*/
     }
   },
-  hours: [
-    {
-      day: [ //mon
-        { 
-          open: Number,     // open: 570 => hrs * mins
-          /*required: true*/
-        },
-        {
-          close: Number, // close: 1080
-          /*required: true*/
-        }
-      ]
-    }
-  ],
+  hours: {
+    Mon: String, 
+    Tue: String, 
+    Wed: String, 
+    Thu: String,
+    Fri: String,
+    Sat: String, 
+    Sun: String, 
+  },
   rating: { type: mongoose.Schema.Types.ObjectId, ref: 'Rating' },
-  comments: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Comment'
-    }
-  ],
+  comments: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Comment' } ],
   events: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Event' } ]
 });
 
