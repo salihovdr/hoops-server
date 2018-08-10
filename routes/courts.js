@@ -5,20 +5,8 @@ const express = require('express');
 const Court = require('../models/court');
 const router = express.Router();
 
-//router.use('/', passport.authenticate('jwt', { session: false, failWithError: true }));
 
-// function validateCourtId(id) {
-//   return Court.count({ _id: id })
-//     .then(count => {
-//       if (count === 0) {
-//         const err = new Error('The `courtId` doesn\'t exist');
-//         err.status = 404;
-//         return Promise.reject(err);
-//       }
-//     });
-// }
-
-//GET all
+//GET all courts
 router.get('/', (req, res, next) => {
   const { /*name,*/ zip }= req.query;
   
