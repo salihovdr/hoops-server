@@ -1,6 +1,8 @@
 
 const mongoose = require('mongoose');
 
+mongoose.Promise = global.Promise;
+
 const courtSchema = new mongoose.Schema({
   name: { 
     type: String, //Walter Reed
