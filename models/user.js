@@ -14,11 +14,22 @@ const userSchema = new mongoose.Schema({
 
 userSchema.set('timestamps', true);
 
+// Customize output for `res.json(data)`, `console.log(data)` etc.
+userSchema.set('toObject', {
+  virtuals: true,     // include built-in virtual `id`
+  versionKey: false,  // remove `__v` version key
+  transform: (doc, ret) => {
+    delete ret._id; // delete `_id`
+  }
+});
+
 userSchema.methods.serialize = function () {
   return {
     username: this.username || '',
     firstName: this.firstName || '',
-    lastName: this.lastName || ''
+    lastName: this.lastName || '',
+    photo: this.photo || '',
+    id: this.id || ''
   };
 };
 

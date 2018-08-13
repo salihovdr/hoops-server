@@ -5,7 +5,7 @@ const { MONGODB_URI } = require('../config');
 
 const Court = require('../models/court');
 const Event = require('../models/event');
-const User = require('../models/user');
+const { User } = require('../models/user');
 
 const seedCourts = require('../db/seed/courts.json');
 const seedEvents = require('../db/seed/events.json');

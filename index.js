@@ -17,6 +17,9 @@ const { dbConnect } = require('./db-mongoose');
 const courtsRouter = require('./routes/courts');
 const eventsRouter = require('./routes/events');
 
+//added this line temporarily
+// const Event = require('./models/event');
+
 const app = express();
 
 
@@ -29,7 +32,7 @@ app.use(function (req, res, next) {
   res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization');
   res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE');
   if (req.method === 'OPTIONS') {
-    return res.send(204);
+    return res.sendStatus(204);
   }
   next();
 });
@@ -45,6 +48,7 @@ app.use('/api/courts', courtsRouter);
 app.use('/api/events', eventsRouter);
 app.use('/api/users/', usersRouter);
 app.use('/api/auth/', authRouter);
+// app.use('/api/protected/events', eventsRouter);
 
 const jwtAuth = passport.authenticate('jwt', { session: false, failWithError: true }); //added failWithError: true
 

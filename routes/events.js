@@ -35,33 +35,11 @@ router.get('/:id', (req, res, next) => {
 }
 );
 
-// router.post('/', (req, res, next) => {
-//   console.log(req.body);
-//   const title = req.body.title;
-//   const description = req.body.description;
-//   const date = req.body.date.date;
-//   const time = req.body.date.time;
-//   const timestamp = `${ date } ${ time }`;
-//   console.log(timestamp);
-
-
-//   Event.create({ title, description, time: timestamp })
-//     .then(newEvent => {
-//       res
-//         .status(201)
-//         .location(`${req.originalUrl}/${newEvent.id}`)
-//         .json(newEvent);
-//     })
-//     .catch(err => next(err));
-// }
-// );
-
-
+//only authenticated users can create events
 router.post('/', passport.authenticate('jwt', { session: false, failWithError: true }), (req, res, next) => {
-  console.log('this is my req log', req.user.id);
-  const { title, description } = req.body;
-  const date = req.body.date.date;
-  const time = req.body.date.time;
+  const { title, description, courtId } = req.body;
+  const date = req.body.timestamp.date;
+  const time = req.body.timestamp.time;
   const timestamp = `${date} ${time}`;
 
   const userId = req.user.id;
@@ -73,8 +51,7 @@ router.post('/', passport.authenticate('jwt', { session: false, failWithError: t
     return next(err);
   }
 
-  const newEvent = { title, description, time: timestamp, userId };
-
+  const newEvent = { title, description, time: timestamp, userId, courtId };
 
   Event.create(newEvent)
     .then(event => {
