@@ -1,48 +1,24 @@
 [
   {
-    "_id": "000000000000000000000000",
-    "name": "Arlington Mill Community Center",
-    "photo": "https://images.unsplash.com/photo-1505666287802-931dc83948e9",
-    "description": "One of the oldest courts in Arlington. Popular with high school and college players",
-    "address": {
-      "street": "909 S Dinwiddie St",
-      "city": "Arlington",
-      "zip": "22204",
-      "phone": "703-228-7790"
-    },
-    "hours": {
-      "Mon": "09:00-19:00",
-      "Tue": "09:00-19:00",
-      "Wed": "09:00-21:00",
-      "Thu": "09:00-19:00",
-      "Fri": "09:00-21:00",
-      "Sat": "09:00-19:00",
-      "Sun": "09:00-18:00"
-    },
-    "comments": [],
-    "events": ["222222222222222222222200"]
-  }, 
-  {
     "_id": "000000000000000000000001",
-    "name": "Charles Drew Community Center",
-    "photo": "https://images.unsplash.com/photo-1467809941367-bbf259d44dd6",
+    "name": "Gunston Park",
+    "photo": "https://s3.amazonaws.com/donics/19275173_609647812575553_5947001109049635588_n.jpg",
     "description": "Place gets busy on Friday and Saturday nights. Terrific ballers, great games",
     "address": {
-      "street": "3500 23rd St S",
+      "street": "1401 28th Street South",
       "city": "Arlington",
       "zip": "22206",
-      "phone": "703-228-5725"
+      "phone": "703-228-6525"
     },
     "hours": {
-      "Mon": "09:00-19:00",
-      "Tue": "09:00-19:00",
-      "Wed": "09:00-21:00",
-      "Thu": "09:00-19:00",
-      "Fri": "09:00-21:00",
-      "Sat": "09:00-19:00",
-      "Sun": "09:00-18:00"
+      "Mon": "07:00-23:00",
+      "Tue": "07:00-23:00",
+      "Wed": "07:00-23:00",
+      "Thu": "07:00-23:00",
+      "Fri": "007:00-23:00",
+      "Sat": "07:00-23:00",
+      "Sun": "07:00-23:00"
     },
-    "comments": [],
     "events": ["222222222222222222222201"]
   },
   {
@@ -65,30 +41,96 @@
       "Sat": "09:00-19:00",
       "Sun": "09:00-18:00"
     },
-    "comments": [],
     "events": []
   },
   {
-    "_id": "000000000000000000000003",
-    "name": "Langston-Brown Community Center",
-    "photo": "https://sportadvisory.com/wp-content/uploads/2017/12/shutterstock_678814279-1024x683.jpg",
-    "description": "Great facility. Clean and well-maintained. Some great players from nearby Marymount U campus. League games on Sundays and Saturdays",
+    "_id": "000000000000000000000004",
+    "name": "Woodstock Park",
+    "photo": "https://s3.amazonaws.com/donics/IMG_6730.JPG",
+    "description": "Enjoy this small 1 1/4 acre grassy area complete with water fountain, a playground and a drop-in basketball court.",
     "address": {
-      "street": "2121 N Culpeper St",
+      "street": "2049 N Woodstock St",
       "city": "Arlington",
       "zip": "22207",
-      "phone": "703-228-5210"
+      "phone": "703-228-6525"
     },
      "hours": { 
-       "Mon": "09:00-19:00", 
-       "Tue": "09:00-19:00", 
-       "Wed": "09:00-21:00", 
-       "Thu": "09:00-19:00",
-       "Fri": "09:00-21:00",
-       "Sat": "09:00-19:00", 
-       "Sun": "09:00-18:00" 
+       "Mon": "07:00-21:00", 
+       "Tue": "07:00-21:00", 
+       "Wed": "07:00-21:00", 
+       "Thu": "07:00-21:00",
+       "Fri": "07:00-21:00",
+       "Sat": "07:00-21:00", 
+       "Sun": "07:00-21:00" 
     },
-    "comments": [],
+    "events": []
+  },
+  {
+    "_id": "000000000000000000000005",
+    "name": "Quincy Park",
+    "photo": "https://arlingtonva.s3.amazonaws.com/wp-content/uploads/sites/17/2014/08/quincybasket-ball-court.jpg",
+    "description": "With baseball/softball fields adjacent to the Central Library (Diamond #3 is permit takes priority), this four-acre park features six tennis courts, a basketball court and one sand volleyball court with plenty of open space for play. Quincy Park also features places for picnics with reservable shelters and a playground.",
+    "address": {
+      "street": "1021 N Quincy St",
+      "city": "Arlington",
+      "zip": "22201",
+      "phone": "703-228-6525"
+    },
+    "hours": {
+      "Mon": "08:00-20:00",
+      "Tue": "08:00-20:00",
+      "Wed": "08:00-20:00",
+      "Thu": "08:00-20:00",
+      "Fri": "08:00-20:00",
+      "Sat": "08:00-20:00",
+      "Sun": "08:00-20:00"
+    },
+    "events": []
+  },
+  {
+    "_id": "000000000000000000000000",
+    "name": "Towers Park",
+    "photo": "https://arlingtonva.s3.amazonaws.com/wp-content/uploads/sites/17/2014/08/towers-basketball.jpg",
+    "description": "This four-acre park features a playground, four lighted tennis courts and two practice walls, a lighted basketball court, a sand volleyball court, a community garden and a lighted dog park. You’ll also find drinking fountains, picnic tables and a picnic shelter",
+    "address": {
+      "street": "801 S Scott St",
+      "city": "Arlington",
+      "zip": "22204",
+      "phone": "703-228-6525"
+    },
+    "hours": {
+      "Mon": "07:00-21:00",
+      "Tue": "07:00-21:00",
+      "Wed": "07:00-21:00",
+      "Thu": "07:00-21:00",
+      "Fri": "07:00-21:00",
+      "Sat": "07:00-21:00",
+      "Sun": "07:00-21:00"
+    },
+    "events": [
+      "222222222222222222222200"
+    ]
+  },
+  {
+    "_id": "000000000000000000000006",
+    "name": "Lyon Village Park",
+    "photo": "https://arlingtonva.s3.amazonaws.com/wp-content/uploads/sites/17/2014/08/lyon-village.jpg",
+    "description": "Lyon Village is a two-acre fenced park packed full of recreational amenities. In addition to a picnic area and a playground, there are two tennis courts (lit until 10 p.m.) and a basketball court (lit until 10 p.m.) There is very limited two-hour street parking and no bus parking.",
+    "address": {
+      "street": "1800 N Highland St",
+      "city": "Arlington",
+      "zip": "22201",
+      "phone": "703-228-6525"
+    },
+    "hours": {
+      "Mon": "07:00-22:00",
+      "Tue": "07:00-22:00",
+      "Wed": "07:00-22:00",
+      "Thu": "07:00-22:00",
+      "Fri": "07:00-22:00",
+      "Sat": "07:00-22:00",
+      "Sun": "07:00-22:00"
+    },
     "events": []
   }
 ]
