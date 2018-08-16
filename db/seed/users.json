@@ -1,26 +1,26 @@
 [
   {
   "_id": "333333333333333333333300",
-  "firstName": "Bob",
-  "lastName": "Brown",
-  "photo": "http://www.rid4good.com/portal/assets/images/default-profile-pic.png",
-  "username": "bobuser",
-  "password": "$2a$10$3QeRQU.T.O3dnBKRnNgqX.xBp0qy1CQY8FJynYx7g5eh.1z3ScD1i"
-  },
-  {
-    "_id": "333333333333333333333301",
-    "firstName": "John",
-    "lastName": "Smith",
-    "photo": "http://www.rid4good.com/portal/assets/images/default-profile-pic.png",
-    "username": "johnuser",
-    "password": "$2a$10$3QeRQU.T.O3dnBKRnNgqX.xBp0qy1CQY8FJynYx7g5eh.1z3ScD1i"
+  "firstName": "Michael",
+  "lastName": "Jordan",
+  "photo": "https://www.thefamousbirthdays.com/photo/commons/b/b3/wk_21400_14435_large.jpg",
+  "username": "mikej",
+  "password": "$2a$10$XZ7Bd.06KSuCEJW6yFnHBuQh4SAFRlzlS9Gfol5SZkdpQIQ5KrEXq"
   },
   {
     "_id": "333333333333333333333302",
-    "firstName": "Jane",
-    "lastName": "Doe",
-    "photo": "http://thehomemanali.com/wp-content/uploads/cache/2017/07/profile-pic-dummy/1513037944.jpg",
-    "username": "janeuser",
-    "password": "$2a$10$3QeRQU.T.O3dnBKRnNgqX.xBp0qy1CQY8FJynYx7g5eh.1z3ScD1i"
+    "firstName": "LeBron",
+    "lastName": "James",
+    "photo": "http://www.gstatic.com/tv/thumb/persons/287557/287557_v9_ba.jpg",
+    "username": "bronnyj",
+    "password": "$2a$10$XZ7Bd.06KSuCEJW6yFnHBuQh4SAFRlzlS9Gfol5SZkdpQIQ5KrEXq"
+  },
+  {
+    "_id": "333333333333333333333301",
+    "firstName": "Steph",
+    "lastName": "Curry",
+    "photo": "https://www.mercurynews.com/wp-content/uploads/2018/02/bng-l-warriors-0209-33.jpg?w=525",
+    "username": "stephcurry",
+    "password": "$2a$10$XZ7Bd.06KSuCEJW6yFnHBuQh4SAFRlzlS9Gfol5SZkdpQIQ5KrEXq"
   }
 ]

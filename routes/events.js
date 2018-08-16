@@ -1,4 +1,3 @@
-'use strict';
 
 const express = require('express');
 const passport = require('passport');
@@ -7,7 +6,6 @@ const Event = require('../models/event');
 const Court = require('../models/court');
 
 const router = express.Router();
-// router.use('/', passport.authenticate('jwt', { session: false, failWithError: true }));
 
 //GET all
 router.get('/', (req, res, next) => {
@@ -17,7 +15,6 @@ router.get('/', (req, res, next) => {
     $gte: date
   }}*/)
     .limit(5).skip(page * 5)
-    // .populate('courtId')
     .then(events => {
       res.json(events);
     })
@@ -29,7 +26,7 @@ router.get('/', (req, res, next) => {
 //GET by Id
 router.get('/:id', (req, res, next) => {
   const id = req.params.id;
-
+  
   Event.findById(id)
     .populate('courtId', 'name')
     .populate('userId', 'username')

@@ -17,9 +17,6 @@ const { dbConnect } = require('./db-mongoose');
 const courtsRouter = require('./routes/courts');
 const eventsRouter = require('./routes/events');
 
-//added this line temporarily
-// const Event = require('./models/event');
-
 const app = express();
 
 
@@ -48,16 +45,6 @@ app.use('/api/courts', courtsRouter);
 app.use('/api/events', eventsRouter);
 app.use('/api/users/', usersRouter);
 app.use('/api/auth/', authRouter);
-// app.use('/api/protected/events', eventsRouter);
-
-const jwtAuth = passport.authenticate('jwt', { session: false, failWithError: true }); //added failWithError: true
-
-// A protected endpoint which needs a valid JWT to access it
-app.get('/api/protected', jwtAuth, (req, res) => {
-  return res.json({
-    data: 'rosebud'
-  });
-});
 
 // Custom 404 Not Found route handler
 app.use((req, res, next) => {
