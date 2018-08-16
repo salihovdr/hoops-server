@@ -1,10 +1,10 @@
+'use strict';
 
 const express = require('express');
 //const passport = require('passport');
 //const mongoose = require('mongoose');
 const Court = require('../models/court');
 const router = express.Router();
-
 
 //GET all courts
 router.get('/', (req, res, next) => {
@@ -16,11 +16,6 @@ router.get('/', (req, res, next) => {
   if (zip) {
     filter['address.zip'] = zip;
   }
-
-  // if (name) {
-  //   const n = new RegExp(name, 'i');
-  //   filter.name = n;
-  // }
 
   Court.find(filter)
     .populate('events')

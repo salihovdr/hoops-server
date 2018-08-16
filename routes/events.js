@@ -1,6 +1,8 @@
+'use strict';
 
 const express = require('express');
 const passport = require('passport');
+const mongoose = require('mongoose');
 const Event = require('../models/event');
 const Court = require('../models/court');
 
@@ -72,6 +74,25 @@ router.post('/', passport.authenticate('jwt', { session: false, failWithError: t
         .location(`${req.originalUrl}/${event.id}`)
         .status(201)
         .json(event);
+    })
+    .catch(err => {
+      next(err);
+    });
+});
+
+router.delete('/:id', passport.authenticate('jwt', 
+  { session: false, failWithError: true }), (req, res, next) => {
+  const eventId = req.params.id;
+
+  if (!mongoose.Types.ObjectId.isValid(eventId)) {
+    const err = new Error('The `id` is not valid');
+    err.status = 400;
+    return next(err);
+  }
+
+  Event.findByIdAndRemove(eventId)
+    .then(() => {
+      res.sendStatus(204);
     })
     .catch(err => {
       next(err);
