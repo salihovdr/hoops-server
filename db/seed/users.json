@@ -3,7 +3,7 @@
   "_id": "333333333333333333333300",
   "firstName": "Bob",
   "lastName": "Brown",
-  "photo": "http: //www.rid4good.com/portal/assets/images/default-profile-pic.png",
+  "photo": "http://www.rid4good.com/portal/assets/images/default-profile-pic.png",
   "username": "bobuser",
   "password": "$2a$10$3QeRQU.T.O3dnBKRnNgqX.xBp0qy1CQY8FJynYx7g5eh.1z3ScD1i"
   },
@@ -11,7 +11,7 @@
     "_id": "333333333333333333333301",
     "firstName": "John",
     "lastName": "Smith",
-    "photo": "http: //www.rid4good.com/portal/assets/images/default-profile-pic.png",
+    "photo": "http://www.rid4good.com/portal/assets/images/default-profile-pic.png",
     "username": "johnuser",
     "password": "$2a$10$3QeRQU.T.O3dnBKRnNgqX.xBp0qy1CQY8FJynYx7g5eh.1z3ScD1i"
   },

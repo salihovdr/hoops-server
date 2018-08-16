@@ -9,8 +9,13 @@ const router = express.Router();
 
 //GET all
 router.get('/', (req, res, next) => {
-  Event.find()
-    .populate('courtId')
+  let page = req.query.page || 0;
+  // let date = new Date();
+  Event.find(/*{time: {
+    $gte: date
+  }}*/)
+    .limit(5).skip(page * 5)
+    // .populate('courtId')
     .then(events => {
       res.json(events);
     })
@@ -24,7 +29,8 @@ router.get('/:id', (req, res, next) => {
   const id = req.params.id;
 
   Event.findById(id)
-    .populate('courtId')
+    .populate('courtId', 'name')
+    .populate('userId', 'username')
     .then(event => {
       if (event) {
         res.json(event);

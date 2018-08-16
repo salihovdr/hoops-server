@@ -8,6 +8,19 @@ const router = express.Router();
 
 const jsonParser = bodyParser.json();
 
+router.get('/:id', (req, res, next) => {
+  const userId = req.params.id;
+  User.findById(userId)
+    .then(user => {
+      if (user) {
+        res.json(user);
+      } else {
+        next();
+      }
+    })
+    .catch(err => next(err));
+});
+
 // Post to register a new user
 router.post('/', jsonParser, (req, res) => {
   const requiredFields = ['username', 'password'];
