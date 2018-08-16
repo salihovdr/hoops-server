@@ -38,8 +38,6 @@ const courtSchema = new mongoose.Schema({
     Sat: String, 
     Sun: String, 
   },
-  rating: { type: mongoose.Schema.Types.ObjectId, ref: 'Rating' },
-  comments: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Comment' } ],
   events: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Event' } ]
 });
 
