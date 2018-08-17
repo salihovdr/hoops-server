@@ -10,10 +10,13 @@ const router = express.Router();
 //GET all
 router.get('/', (req, res, next) => {
   let page = req.query.page || 0;
-  // let date = new Date();
-  Event.find(/*{time: {
-    $gte: date
-  }}*/)
+  let date = new Date();
+
+  //don't get old events
+  //sort events by date
+  Event.find({time: {
+    $gte: date}})
+    .sort({time: +1})
     .limit(5).skip(page * 5)
     .then(events => {
       res.json(events);
