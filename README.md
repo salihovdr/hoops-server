@@ -25,7 +25,3 @@ https://hoops-client.herokuapp.com/
 ![alt text][court]
 
 [court]: https://s3.us-east-2.amazonaws.com/hoops-dannny/Screen+Shot+2018-08-17+at+16.21.41.png "Single Court"
-
-![alt text][event]
-
-[event]: https://s3.us-east-2.amazonaws.com/hoops-dannny/Screen+Shot+2018-08-17+at+16.22.36.png "Single Event"
