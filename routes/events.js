@@ -80,51 +80,6 @@ router.post('/', passport.authenticate('jwt', { session: false, failWithError: t
     });
 });
 
-router.put('/:id', (req, res, next) => {
-  const { id } = req.params;
-  const userId = req.user.id;
-
-  const { title, description, courtId } = req.body;
-
-  /***** Never trust users - validate input *****/
-
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    const err = new Error('The `id` is not valid');
-    err.status = 400;
-    return next(err);
-  }
-
-  if (title === '') {
-    const err = new Error('Missing `title` in request body');
-    err.status = 400;
-    return next(err);
-  }
-
-  const updatedDate = req.body.timestamp.date;
-  const updatedTime = req.body.timestamp.time;
-  const updatedTimestamp = `${updatedDate} ${updatedTime}`;
-
-  const updateEvent = { title, description, time: updatedTimestamp, courtId, userId };
-  
-  let court;
-  Court.findById(courtId)
-    .then(_court => {
-      court = _court;
-      return Event.findByIdAndUpdate(id, updateEvent, {new: true});
-    })
-    .then(event => {
-      court.events.push(event);
-      court.save();
-      res
-        .location(`${req.originalUrl}/${event.id}`)
-        .status(200)
-        .json(event);
-    })
-    .catch(err => {
-      next(err);
-    });
-});
-
 router.delete('/:id', passport.authenticate('jwt', 
   { session: false, failWithError: true }), (req, res, next) => {
   const eventId = req.params.id;
