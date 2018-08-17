@@ -80,6 +80,42 @@ router.post('/', passport.authenticate('jwt', { session: false, failWithError: t
     });
 });
 
+router.put('/:id', passport.authenticate('jwt', { session: false, failWithError: true }), (req, res, next) => {
+  const eventId = req.params.id;
+  const { title, description, courtId } = req.body;
+  const date = req.body.timestamp.date;
+  const time = req.body.timestamp.time;
+  const timestamp = `${date} ${time}`;
+
+  const userId = req.user.id;
+
+  if (!mongoose.Types.ObjectId.isValid(eventId)) {
+    const err = new Error('The `id` is not valid');
+    err.status = 400;
+    return next(err);
+  }
+
+  /***** Never trust users - validate input *****/
+  if (!title) {
+    const err = new Error('Missing `title` in request body');
+    err.status = 400;
+    return next(err);
+  }
+
+  const updatedEvent = { title, description, time: timestamp, userId, courtId };
+  
+  Event.findByIdAndUpdate(eventId, updatedEvent, {new: true})
+    .then(result => {
+      res
+        .location(`${req.originalUrl}/${result.id}`)
+        .status(200)
+        .json(result);
+    })
+    .catch(err => {
+      next(err);
+    });
+});
+
 router.delete('/:id', passport.authenticate('jwt', 
   { session: false, failWithError: true }), (req, res, next) => {
   const eventId = req.params.id;
