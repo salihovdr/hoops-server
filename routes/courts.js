@@ -33,7 +33,7 @@ router.get('/:id', (req, res, next) => {
 
   Court.findById(id)
     .populate({
-      path: 'events',
+      path: 'events', options: { sort: { time: +1 } },
       populate: { path: 'userId', select: 'username' }
     })
     .then(court => {
