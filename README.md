@@ -1,7 +1,7 @@
 ## Let's Shoot Some Hoops!
 
 ### Brief Description
-This is a server for my web app that allows anyone in Arlington county to search for basketball courts and create events to play with friends and other ballers in the area.
+Server for web app that allows anyone in Arlington county to search for basketball courts and create events to play with friends and other ballers in the area.
 
 ### Tech Stack
 The app uses Node/Express for the backend, Passport/JWT for authentication and MongoDB for the database.
